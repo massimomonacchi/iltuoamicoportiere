@@ -19,7 +19,7 @@ function create_menu(){
 	var div = document.createElement('div');
 	div.className = 'menu';
 	div.setAttribute("id", "menu");
-	div.innerHTML = "<a> chi siamo</a> <a style='padding-left:80px;padding-right:80px;'> i nostri servizi</a> <a> lavora con noi</a>"
+	div.innerHTML = "<a id='prova12'> chi siamo</a> <a style='padding-left:80px;padding-right:80px;'> i nostri servizi</a> <a> lavora con noi</a>"
 	var ele = document.querySelector('.content');
 	ele.parentNode.insertBefore(div, ele);
 	div.style.position = "absolute";
@@ -29,7 +29,8 @@ function create_menu(){
 	div.style.textAlign = "center";
 	div.style.display = "inline";
 	div.style.fontSize= "20px";
-	div.style.paddingTop = "20px";
+	div.style.height = document.getElementById("prova12").offsetHeight+"px";
+	console.log(document.getElementById("prova12").offsetHeight);
 }
 
 
@@ -40,7 +41,8 @@ function menu_none(){
 	document.getElementById("logo").style.textAlign = "center";
 	document.getElementById("menu").style.display = "inline";
 	document.getElementById("content").style.top = document.getElementById('header').offsetHeight + document.getElementById('menu').offsetHeight +"px";
-	document.getElementById("footer").style.top = document.getElementById('header').offsetHeight + document.getElementById('menu').offsetHeight+ document.getElementById('content').offsetHeight +"px";
+	console.log(document.getElementById('header').offsetHeight + document.getElementById('menu').offsetHeight+ document.getElementById('content').offsetHeight +"px");
+	document.getElementById("footer").style.top = document.getElementById('header').offsetHeight + document.getElementById('menu').offsetHeight + document.getElementById('content').offsetHeight +"px";
 }
 
 function menu_inline(){

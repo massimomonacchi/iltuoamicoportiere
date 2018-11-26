@@ -1,6 +1,7 @@
 body{
 	width:100%;
 	margin:auto;
+	height:100%;
 }
 
 
@@ -22,6 +23,10 @@ body{
 
 .content{
 	position:relative;
+	padding:0;
+}
+p{
+	padding:0;
 }
 
 .logo{
