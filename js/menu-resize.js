@@ -15,25 +15,52 @@ var newCodes = function() {
     };
 };
 
+function create_menu(){
+	var div = document.createElement('div');
+	div.className = 'menu';
+	div.setAttribute("id", "menu");
+	div.innerHTML = "<a> chi siamo</a> <a style='padding-left:80px;padding-right:80px;'> i nostri servizi</a> <a> lavora con noi</a>"
+	var ele = document.querySelector('.content');
+	ele.parentNode.insertBefore(div, ele);
+	div.style.position = "absolute";
+	div.style.top = document.getElementById('header').offsetHeight+"px";
+	div.style.display = "none";
+	div.style.width = "100%";
+	div.style.textAlign = "center";
+	div.style.display = "inline";
+	div.style.fontSize= "20px";
+	div.style.paddingTop = "20px";
+}
+
 
 function menu_none(){
-	
-		  document.getElementById("logo").style.left ="0px";
-		  document.getElementById("nav").style.display ="none";
-		  document.getElementById("logo").style.width = "100%";
-		  document.getElementById("logo").style.textAlign = "center";
+	document.getElementById("logo").style.left ="0px";
+	document.getElementById("nav").style.display ="none";
+	document.getElementById("logo").style.width = "100%";
+	document.getElementById("logo").style.textAlign = "center";
+	document.getElementById("menu").style.display = "inline";
+	document.getElementById("content").style.top = document.getElementById('header').offsetHeight + document.getElementById('menu').offsetHeight +"px";
+	document.getElementById("footer").style.top = document.getElementById('header').offsetHeight + document.getElementById('menu').offsetHeight+ document.getElementById('content').offsetHeight +"px";
 }
 
 function menu_inline(){
-		  document.getElementById("nav").style.display ="inline";
-		  document.getElementById("logo").style.left ='90px';
-		  document.getElementById("logo").style.display = "inline";
-		  document.getElementById("logo").style.textAlign = "left";
+	document.getElementById("menu").style.display = "none";
+	document.getElementById("nav").style.display ="inline";
+	document.getElementById("logo").style.left ='90px';
+	document.getElementById("logo").style.display = "inline";
+	document.getElementById("logo").style.textAlign = "left";
+	document.getElementById("content").style.top = document.getElementById('header').offsetHeight  +"px";
+	document.getElementById("footer").style.top = document.getElementById('header').offsetHeight + document.getElementById('content').offsetHeight +"px";
 }
 
 
 //funzione controllo all'apertura della pagina
 function page_load(){
+	create_menu();
+	document.getElementById("content").style.top = document.getElementById('header').offsetHeight +"px";
+	var a = document.getElementById('header').offsetHeight + document.getElementById('content').offsetHeight;
+	document.getElementById("footer").style.top = a +"px";
+	
 	if( x < 1099){
 		menu_none();
 	}

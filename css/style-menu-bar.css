@@ -21,6 +21,9 @@ body{
 	height:100px;
 }
 
+.content{
+	position:relative;
+}
 
 .logo{
 	position:absolute;
@@ -36,10 +39,9 @@ body{
 }
 
 
-li{
+li.nav1{
 	list-style:none;
 	float:left;
-	margin-left:15 px;
 	padding-top:20px;
 	padding-left:10px;
 	padding-right:60px;
@@ -50,16 +52,12 @@ a{
     text-decoration: none;
 }
 
-p.prova{
-	padding-top:71px;
-}
 
-footer{
-    position: relative;
+.footer{
+    position: absolute;
     height: 100px;
     width: 100%;
     background-color: gray;
-	bottom:0;	
 }
 
 
