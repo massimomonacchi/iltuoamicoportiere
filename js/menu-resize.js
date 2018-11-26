@@ -15,54 +15,54 @@ var newCodes = function() {
     };
 };
 
-var codes = newCodes();
-	var x=codes.x;
-	var y=codes.y;
 
-var addEvent = function(object, type, callback) {
-    if (object == null || typeof(object) == 'undefined') return;
-    if (object.addEventListener) {
-        object.addEventListener(type, callback, false);
-		console.log("piccolo");
-		check_if_not_menu();
-    } else if (object.attachEvent) {
-        object.attachEvent("on" + type, callback);
-    } else {
-        object["on"+type] = callback;
-    }
-};
-
-
-addEvent(window, "resize", function(event) {
+function menu_none(){
 	
-	var codes = newCodes();
-	var width=codes.x;
-	var height=codes.y;
-	
-	if(width>x){/*
-		console.log("ciao");
-		document.getElementById("logo").style.left = (document.getElementById("logo").getClientRects().left + 2) + "px";
-		x = width;*/
-		if(codes.x < 1125){
-			document.getElementById("nav").style.display ="none";
-			console.log("fatto");
-		}	
+		  document.getElementById("logo").style.left ="0px";
+		  document.getElementById("nav").style.display ="none";
+		  document.getElementById("logo").style.width = "100%";
+		  document.getElementById("logo").style.textAlign = "center";
+}
+
+function menu_inline(){
+		  document.getElementById("nav").style.display ="inline";
+		  document.getElementById("logo").style.left ='90px';
+		  document.getElementById("logo").style.display = "inline";
+		  document.getElementById("logo").style.textAlign = "left";
+}
+
+
+//funzione controllo all'apertura della pagina
+function page_load(){
+	if( x < 1099){
+		menu_none();
 	}
-  
+	else{
+		menu_inline();
+	}
+}
+
+
+
+
+//code MAIN sstart here
+var codes = newCodes();
+ x =codes.x;
+ y =codes.y;
+
+page_load();
+
+$(window).on('resize', function(){
+      var win = $(this); //this = window
+	  var amb = win.width();
+      if (amb>1099){
+		  menu_inline();
+	  }
+	  else{
+		  menu_none();
+	  }
+	  x = amb;
 });
 
 
 
-function check_if_not_menu(){
-	console.log("prova");
-	var codes = newCodes();
-	var width=codes.x;
-	var height=codes.y;
-	
-	if(width>x){
-		if(width < 1125){
-			document.getElementById("nav").style.display ="none";
-			console.log("fatto");
-		}	
-	}
-};

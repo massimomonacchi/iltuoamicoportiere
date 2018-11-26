@@ -23,10 +23,9 @@ body{
 
 
 .logo{
-	transition: 0.5s;
-    opacity: 1;
 	position:absolute;
 	left:90px;
+	float:left;
 }
 
 .nav{
