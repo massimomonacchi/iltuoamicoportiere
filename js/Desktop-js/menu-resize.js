@@ -79,10 +79,11 @@ var codes = newCodes();
  x =codes.x;
  y =codes.y;
 
+
 page_load();
 
-$(window).on('resize', function(){
-      var win = $(this); //this = window
+window.onresize = function() {
+   var win = $(this); //this = window
 	  var amb = win.width();
       if (amb>1099){
 		  menu_inline();
@@ -91,7 +92,8 @@ $(window).on('resize', function(){
 		  menu_none();
 	  }
 	  x = amb;
-});
+};
+
 
 
 
