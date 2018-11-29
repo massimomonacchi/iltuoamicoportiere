@@ -2,7 +2,7 @@
 	
 			var link = document.createElement('link');
 			link.rel = 'stylesheet';
-			link.href = 'css/style-menu-bar2.css';
+			link.href = 'css/style-menu-bar-mobile.css';
 			document.head.appendChild(link);
 			var script = document.createElement('script');
 			script.type = 'text/javascript';
@@ -10,7 +10,7 @@
 			document.head.appendChild(script);
 			var script2 = document.createElement('script');
 			script2.type = 'text/javascript';
-			script2.src ="js/Desktop-js/menu-resize.js";
+			script2.src ="js/Mobile-js/menu-resize.js";
 			document.body.append(script2);
  } else {
 			var link = document.createElement('link');

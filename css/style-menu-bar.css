@@ -14,6 +14,7 @@ body{
 	margin:0 auto;
 }
 
+
 .header{
 	background:green;
 	width:100%;
@@ -23,7 +24,8 @@ body{
 
 .content{
 	position:relative;
-	padding:0;
+	padding-left:100px;
+	padding-right:100px;
 }
 p{
 	padding:0;
