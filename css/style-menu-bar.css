@@ -2,7 +2,9 @@ body{
 	width:100%;
 	margin:auto;
 	height:100%;
-	 display:block; 
+	 display:block;
+	 background-repeat:none;
+	 background-attachment: fixed;
 }
 
 
@@ -26,7 +28,10 @@ body{
 }
 
 .content{
+	opacity:0.5;
 	position:relative;
+	margin-left:200px;
+	margin-right:200px;
 }
 p{
 	padding:0;
@@ -36,6 +41,7 @@ p{
 	position:relative;
 	left:90px;
 	float:left;
+	font-family: 'Patua One', cursive;
 }
 
 .nav{
@@ -78,7 +84,7 @@ z-index:997;
 .ciccio{
 	height:100px;
 	width:100px;
-	padding-left:10%;
+	padding-left:7%;
 }
 
 .ciccio2{
@@ -86,5 +92,5 @@ z-index:997;
 }
 
 p{
-	font-size:25px;
+	font-size:20px;
 }
