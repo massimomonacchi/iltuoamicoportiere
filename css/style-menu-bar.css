@@ -18,6 +18,27 @@ body{
 }
 
 
+img.log {
+	position:relative;
+    width:100px;
+    height:100px;
+}
+div.item {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width: 200px;
+	font-size:25px;
+    position:relative;
+	margin-left:3%;
+}
+img.servizi{
+    width: 100px;
+    height: 100px;
+}
+.caption {
+	display: block;
+}
 .header{
 	background:white;
 	width:100%;
@@ -28,7 +49,8 @@ body{
 }
 
 .content{
-	opacity:0.5;
+	background:white;
+	opacity:0.9;
 	position:relative;
 	margin-left:200px;
 	margin-right:200px;
@@ -38,10 +60,9 @@ p{
 }
 
 .logo{
-	position:relative;
-	left:90px;
 	float:left;
 	font-family: 'Patua One', cursive;
+	background.gray;
 }
 
 .nav{
@@ -64,8 +85,6 @@ a{
     text-decoration: none;
 }
 
-
-
 .main{
 font-family: 'Gloria Hallelujah', cursive;
 font-size:30px;
@@ -78,7 +97,6 @@ z-index:997;
 
 .footer{
 	height:100px;
-	background-color:black;
 }
 
 .ciccio{
@@ -94,3 +112,32 @@ z-index:997;
 p{
 	font-size:20px;
 }
+
+
+
+div.chisiamo{
+	width:100%;
+	text-align:center;
+	font-size:40px;
+}
+
+div.text-chisiamo{
+	padding-left:5%;
+	padding-right:5%;
+	font-size:20px;
+}
+
+div.servizi{
+	width:100%;
+}
+
+div.serivizispecifico{
+	font-size:20px;
+}
+
+div.serivizispecifico1{
+	padding-left:5%;
+	font-size:20px;
+}
+
+

@@ -45,11 +45,9 @@ function menu_none(){
 function menu_inline(){
 	document.getElementById("menu").style.display = "none";
 	document.getElementById("nav").style.display ="inline";
-	document.getElementById("logo").style.left ='90px';
-	document.getElementById("logo").style.display = "inline";
-	document.getElementById("logo").style.textAlign = "left";
-	document.getElementById("title").style.display = "inline-block";
-	document.getElementById("logo").style.width = document.getElementById("title").clientWidth+"px";
+	document.getElementById("logo").style.display="inline-block";
+	document.getElementById("title").style.display="inline-block";
+	document.getElementById("title").style.paddingBottom="0px";
 	document.getElementById("content").style.top = document.getElementById('header').offsetHeight  +"px";
 }
 
@@ -57,6 +55,16 @@ function menu_inline(){
 //funzione controllo all'apertura della pagina
 function page_load(){
 	create_menu();
+	
+	document.getElementById("menu").style.display = "none";
+	document.getElementById("nav").style.display ="inline";
+	document.getElementById("logo").style.display="inline-block";
+	document.getElementById("logo").style.height="100px";
+	document.getElementById("title").style.display="inline-block";
+	document.getElementById("title").style.paddingBottom="0px";
+	document.getElementById("title").style.paddingtop="0px";
+	document.getElementById("title").style.position="absolute";
+	document.getElementById("title").style.top="0px";
 	document.getElementById("nav").style.height = document.getElementById("logo").offsetHeight+"px";
 	document.getElementById("nav").style.textAlign= "center";
 	if( x < 1099){
